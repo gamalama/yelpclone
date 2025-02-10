@@ -16,6 +16,8 @@ const LocalStrategy = require('passport-local')
 const User = require('./models/user');
 const hereMaps = require('./utils/hereMaps');
 
+const dbUrl = process.env.DBURL || 'mongodb://127.0.0.1/yelp_clone';
+
 // connect to mongodb
 mongoose.connect('mongodb://127.0.0.1/yelp_clone')
 	.then((result) => {
