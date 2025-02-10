@@ -19,7 +19,7 @@ const hereMaps = require('./utils/hereMaps');
 const dbUrl = process.env.DBURL || 'mongodb://127.0.0.1/yelp_clone';
 
 // connect to mongodb
-mongoose.connect('mongodb://127.0.0.1/yelp_clone')
+mongoose.connect(dbUrl)
 	.then((result) => {
 		console.log('connected to mongodb')
 	}).catch((err) => {
